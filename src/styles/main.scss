@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;900&family=Oswald:wght@500&display=swap');
+
+$oswald: 'Oswald', sans-serif;
+$nunito: 'Nunito Sans', sans-serif;
+
+$type-dark: #242323;
+$type-light: #ffffff;
+$brand-blue: #41b4d3;
+
+h1{
+  font-family: $oswald;
+}
+h2{
+  font-family: $nunito;
+}
+
+.blue-type{
+  color: $brand-blue;
+}
