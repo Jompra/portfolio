@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;900&family=Oswald:wght@500&display=swap');
+
+$oswald: 'Oswald', sans-serif;
+$nunito: 'Nunito Sans', sans-serif;
+
+$type-dark: #242323;
+$type-light: #ffffff;
+$brand-blue: #41b4d3;
+
+body{
+  max-width: 1440px;
+  margin: auto;
+}
+
+.about{
+  background-color: $type-dark;
+  display: flex;
+  justify-content: space-around;
+  h1{
+    width: 843px;
+    height: 60px;
+    font-family: $oswald;
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 14px;
+    color: #ffffff;
+  }
+  h2{
+    width: 357px;
+    font-family: $nunito;
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 0.88px;
+    color: #ffffff;
+  }
+  h3{
+    font-family: $nunito;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    margin: 14px 10px;
+    color: #ffffff;
+  }
+  p{
+    width: 330px;
+    font-family: $nunito;
+    font-size: 16px;
+    color: #ffffff;
+  }
+
+  .display{
+    width: 350px;
+    // border: 1px solid lightblue;
+    .logo-feild{
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      svg{
+        height: 66px;
+        width: 66px;
+        margin: 10px 45px 10px 0;
+      }
+    }
+    .skill-field{
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.blue-type{
+  color: $brand-blue;
+}

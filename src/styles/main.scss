@@ -7,13 +7,5 @@ $type-dark: #242323;
 $type-light: #ffffff;
 $brand-blue: #41b4d3;
 
-h1{
-  font-family: $oswald;
-}
-h2{
-  font-family: $nunito;
-}
 
-.blue-type{
-  color: $brand-blue;
-}
+@import 'about', 'projects'
