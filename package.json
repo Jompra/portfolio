@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "detect-browser": "^5.1.1",
     "eslint-plugin-react": "^7.18.3",
     "node-sass": "^4.13.1",
     "react": "^16.13.1",

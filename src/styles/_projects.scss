@@ -1,8 +1,7 @@
 .projects{
-  
-  .carousel-wrapper{
-    margin-left: 10vw;
-    background-color: $type-dark;
+
+  .prjects-wrapper{
+    display: flex;
     .project-card{
       max-width: 600px;
       height: 600px;

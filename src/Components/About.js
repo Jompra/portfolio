@@ -2,9 +2,9 @@ import React from 'react'
 import { SvgIcon } from './Icons'
 
 
-const technicalSkills = ['node', 'javascript', 'react', 'python', 'mongo', 'postgres', 'git', 'github', 'django', 'html', 'css', 'ruby', 'heroku', 'vscode', 'bulma', 'c#', 'crestron']
+const technicalSkills = ['node', 'javascript', 'react', 'python', 'mongo', 'postgres', 'git', 'github', 'django', 'html', 'css', 'ruby', 'heroku', 'vscode', 'crestron']
 
-const currentlyLearning = ['vue', 'php', 'laravel']
+const currentlyLearning = ['vue', 'asp', 'c#']
 
 const professionalSkills = [
   'Unit testing', 'GitHub', 'Team working', 'Active Learning', 'Pair Programming'

@@ -1,9 +1,16 @@
 import React from 'react'
 import { SvgIcon } from './Icons'
+import { detect } from 'detect-browser'
 
-function ProjectCard({ content }, assignedIndex, currentIndex, browser) {
 
-  console.log(browser)
+function ProjectCard({ content }) {
+  const browser = detect()
+
+  // React.useState(() => {
+  //   setUserBrowser(browser.name)
+  // }, [])
+  // console.log('initial',userBrowser)
+
   return (
     <div
       className="project-card"
@@ -39,7 +46,7 @@ function ProjectCard({ content }, assignedIndex, currentIndex, browser) {
         <SvgIcon
           width={25}
           height={25}
-          icon={browser}
+          icon={browser.name}
           primaryFill={'#fff'}
         />
       Live
@@ -54,7 +61,6 @@ function ProjectCard({ content }, assignedIndex, currentIndex, browser) {
       Github
       </button>
     </div>
-
   )
 }
 

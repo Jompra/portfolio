@@ -1,6 +1,6 @@
 import React from 'react'
 import ProjectCard from './ProjectCard'
-
+import ItemsCarousel from 'react-items-carousel'
 
 const content = [
   {
@@ -41,20 +41,46 @@ function Projects() {
   const [activeItemIndex, setActiveItemIndex] = React.useState(0)
   const [userBrowser, setUserBrowser] = React.useState('')
 
+  React.useEffect(() => {
+    const getUserBrowser = () => {
+      const userAgentString = navigator.userAgent
+      if (userAgentString.indexOf('Chrome') > -1) setUserBrowser('chrome')
+      if (userAgentString.indexOf('MSIE') > -1 || userAgentString.indexOf('rv:') > -1) setUserBrowser('edge')
+      if (userAgentString.indexOf('Firefox') > -1) setUserBrowser('firefox')
+      if (userAgentString.indexOf('Safari') > -1) setUserBrowser('safari')
+      
+    }
+    getUserBrowser()
+  } ,[])
 
+  console.log(userBrowser)
 
   return (
     <section className="projects">
-      <div className="prjects-wrapper">
-        {content.map(project => (
-          <ProjectCard
-            className="project-card"
-            key={project.title}
-            content={project}
-          />
-        ))}
+      <div className="carousel-wrapper">
+        <ItemsCarousel
+          infiniteLoop
+          requestToChangeActive={setActiveItemIndex}
+          activeItemIndex={activeItemIndex}
+          numberOfCards={2}
+          gutter={0}
+          showSlither={true}
+          lastGutter={true}
+        >
+          {content.map((project, i) => (
+            <ProjectCard 
+              key={project.title} 
+              content={project} 
+              browser={userBrowser}
+              assignedIndex={i}
+              currentIndex={activeItemIndex}
+            />
+          ))}
+        </ItemsCarousel>
       </div>
       <div>
+        <button onClick={() => setActiveItemIndex(activeItemIndex - 1)}>previous</button>
+        <button onClick={() => setActiveItemIndex(activeItemIndex + 1)}>next</button>
       </div>
     </section>
   )
