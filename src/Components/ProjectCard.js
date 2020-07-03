@@ -6,17 +6,8 @@ import { detect } from 'detect-browser'
 function ProjectCard({ content }) {
   const browser = detect()
 
-  // React.useState(() => {
-  //   setUserBrowser(browser.name)
-  // }, [])
-  // console.log('initial',userBrowser)
-
   return (
-    <div
-      className="project-card"
-      style={{ 'background-image': `linear-gradient(356deg, #676767 100%, #373737 46%), url(${content.backgroundImage})` }}
-    >
-
+    <div className="project-card column is-half">
       <div>
         <h1>{content.title}</h1>
         {content.blurb.split('\n').map((sentence, i) => (
@@ -41,25 +32,33 @@ function ProjectCard({ content }) {
 
         ))}
       </div>
-
-      <button>
-        <SvgIcon
-          width={25}
-          height={25}
-          icon={browser.name}
-          primaryFill={'#fff'}
-        />
+      <a href={content.liveLink}
+        target="_blank"
+        rel="noreferrer">
+        <button>
+          <SvgIcon
+            width={25}
+            height={25}
+            icon={browser.name}
+            primaryFill={'#fff'}
+          />
       Live
-      </button>
-      <button>
-        <SvgIcon
-          width={25}
-          height={25}
-          icon={'github'}
-          primaryFill={'#fff'}
-        />
+        </button>
+      </a>
+
+      <a href={content.githubLink}
+        target="_blank"
+        rel="noreferrer">
+        <button>
+          <SvgIcon
+            width={25}
+            height={25}
+            icon={'github'}
+            primaryFill={'#fff'}
+          />
       Github
-      </button>
+        </button>
+      </a>
     </div>
   )
 }

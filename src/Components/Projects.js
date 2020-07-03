@@ -29,7 +29,7 @@ const content = [
   },
   {
     title: 'Pupper',
-    blurb: '',
+    blurb: 'This is a modern take on the arcade game ‘frogger’ It was my first ever web development project and cemented many of the skills that I had learnt in class. We were restricted to use vanilla JavaScript, HTML, and CSS.',
     tech: ['javascript', 'css', 'html', 'git', 'github'],
     liveLink: 'https://find-your-celebrity-lookalike.netlify.app/',
     githubLink: 'https://github.com/Jompra/sei-project-2',
@@ -38,17 +38,20 @@ const content = [
 ]
 
 function Projects() {
-  const [activeItemIndex, setActiveItemIndex] = React.useState(0)
-  const [userBrowser, setUserBrowser] = React.useState('')
-
-
 
   return (
     <section className="projects">
-      <div className="prjects-wrapper">
-        {content.map(project => (
+      <div className="projects-wrapper columns is-centered">
+        {content.slice(0, 2).map(project => (
           <ProjectCard
-            className="project-card"
+            key={project.title}
+            content={project}
+          />
+        ))}
+      </div>
+      <div className="projects-wrapper columns is-centered">
+        {content.slice(2, 4).map(project => (
+          <ProjectCard
             key={project.title}
             content={project}
           />
