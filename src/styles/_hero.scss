@@ -1,0 +1,39 @@
+.hero{
+  background-image: url('../Assets/HeroBackground.jpeg');
+  background-position: left;
+  nav{
+    a{
+      font-family: $nunito;
+      color: #242323;
+      font-size: 18px;
+      margin: 25px;
+    }
+  }
+  .social-icons{
+    display: flex;
+    flex-direction: column;
+    a{
+      margin: 5px;
+    }
+  }
+  .hero-title{
+    margin-right: 10vw;
+    font-family: $oswald;
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 10px;
+    text-align: right;
+    color: #242323;
+    text-transform: uppercase;
+  }
+  .name{
+    margin-right: 10vw;
+    font-family: $oswald;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 6px;
+    text-align: right;
+    color: #242323;
+    text-transform: uppercase;
+  }
+}

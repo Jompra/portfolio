@@ -13,7 +13,7 @@ const professionalSkills = [
 function About() {
 
   return (
-    <section className="about columns">
+    <section className="about columns" id="about-section">
       <div className="column is-one-third about-display-area">
         <div>
           <h1>ABOUT <span className="blue-type">ME</span></h1>

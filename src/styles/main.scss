@@ -10,4 +10,8 @@ $type-light: #ffffff;
 $brand-blue: #41b4d3;
 
 
-@import 'about', 'projects'
+@import 'about', 'projects', 'hero';
+
+html {
+  scroll-behavior: smooth;
+}
