@@ -13,71 +13,55 @@ const professionalSkills = [
 function About() {
 
   return (
-    <section className="about columns" id="about-section">
-      <div className="column is-one-third about-display-area">
-        <div>
-          <h1>ABOUT <span className="blue-type">ME</span></h1>
+    <section className="section about" id="about-section">
+      <div className="columns">
+        <div className="column is-half about-blurb">
+          <div>
+            <h1>About <span className="blue-text">Me</span></h1>
+            <h2>I&apos;m a General Assembly Grad, Engineer, Entrepreneur, Tinkerer<span className="blue-text">.</span></h2>
+            <p>I initially decided to teach myself Python and C# using online platforms, books, and short courses, before deciding to accelerate my knowledge and partake in a bootcamp with General Assembly. I&apos;m language agnostic, fast learning, goal driven and relish the opportunity to overcome complex problems.
+            I&apos;m looking to join a team where I can grow and develop my skills, whilst contributing to the team&apos;s success on awesome projects.</p>
+          </div>
+          <div>
+            <h2>Currently Learning <span className="blue-text">–</span></h2>
+            <div className="columns is-mobile">
+              {currentlyLearning.map(icon => (
+                <div key={icon} className="column is-3 tech-logo">
+                  <SvgIcon
+                    width={66}
+                    height={66}
+                    icon={icon}
+                    primaryFill={'#41b4d3'}
+                    secondaryFill={'#ffffff'}
+                    backgroundFill={'#242323'}
+                  />
+                  <p className="icon-label">{icon}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
         <div>
-          <h2>I&#39;m a General Assembly Grad, Engineer, Entrepreneur, Tinkerer<span className="blue-type">.</span></h2>
-        </div>
-        <div>
-          <p>I initially decided to teach myself Python and C# using online platforms, books, and short courses, before deciding to accelerate my knowledge and partake in a bootcamp with General Assembly. I&#39;m language agnostic, fast learning, goal driven and relish the opportunity to overcome complex problems.</p>
-          <p>I&#39;m looking to join a team where I can grow and develop my skills, whilst contributing to the team&#39;s success on awesome projects.</p>
-        </div>
-      </div>
-      <div className="column is-one-third about-display-area">
-        <div>
-          <h1>Skills</h1>
-        </div>
-        <div>
-          <h2>Technical <span className="blue-type">—</span></h2>
-        </div>
-        <div className="logo-feild">
-          {technicalSkills.map(tech => (
-            <>
-              <SvgIcon
-                key={tech}
-                width={66}
-                height={66}
-                icon={tech}
-                primaryFill={'#ffffff'}
-                secondaryFill={'#41b4d3'}
-                backgroundFill={'#242323'}
-              />
-              <p>{tech}</p>
-            </>
-          ))}
+          <div className="column">
 
-        </div>
-      </div>
-      <div className="column is-one-third about-display-area">
-        <div>
-          <h2>Professional <span className="blue-type">—</span></h2>
-        </div>
-        <div className="skill-field">
-          {professionalSkills.map(skill => (
-            <h3 key={skill}>{skill}</h3>
-          ))}
-        </div>
-        <div>
-          <h2>Currently Learning <span className="blue-type">—</span></h2>
-        </div>
-        <div className="logo-feild">
-          {currentlyLearning.map((tech) => (
-            <>
-              <SvgIcon
-                key={tech}
-                width={66}
-                height={66}
-                icon={tech}
-                text={true}
-                primaryFill={'#ffffff'}
-                secondaryFill={'#41b4d3'}
-              />
-              <p>{tech}</p>
-            </>
-          ))}
+            <h1>Skills <span className="blue-text">–</span></h1>
+            <div className="columns is-mobile is-multiline">
+              {technicalSkills.map(icon => (
+                <div key={icon} className="tech-logo">
+                  <SvgIcon
+                    width={66}
+                    height={66}
+                    icon={icon}
+                    primaryFill={'#41b4d3'}
+                    secondaryFill={'#ffffff'}
+                    backgroundFill={'#242323'}
+                  />
+                  <p className="icon-label">{icon}</p>
+                </div>
+              ))}
+            </div>
+
+          </div>
         </div>
       </div>
     </section>

@@ -1,0 +1,15 @@
+.mockup-display{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+.screen{
+  position: absolute;
+}
+.onscreen-image{
+  padding: 0.3vw;
+  img{
+    border-radius: 5px;
+  }
+}

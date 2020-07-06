@@ -1,5 +1,7 @@
-import React from 'react'
-import ProjectCard from './ProjectCard'
+import React, { useState } from 'react'
+import { SvgIcon } from './Icons'
+import Mockup from './Mockup'
+import { detect } from 'detect-browser'
 
 
 const content = [
@@ -9,7 +11,7 @@ const content = [
     tech: ['javascript', 'trello', 'heroku', 'html', 'react', 'git', 'django', 'sass', 'python'],
     liveLink: 'https://plntify.herokuapp.com',
     githubLink: 'https://github.com/Jompra/sei-group-project',
-    image: 'https://www.free-css.com/assets/images/free-css-templates/page255/perfect-learn.jpg'
+    image: 'https://res.cloudinary.com/jompra/image/upload/v1592417836/Portfolio/Screenshot_2020-06-17_at_19.16.39_tfmiub.png'
   },
   {
     title: 'Plntify',
@@ -38,29 +40,91 @@ const content = [
 ]
 
 function Projects() {
+  const [contentIndex, setContentIndex] = useState(0)
+
+  const browser = detect()
+
+  const scrollNext = () => {
+    console.log(contentIndex)
+    if (contentIndex === content.length - 1){
+      setContentIndex(0)
+    } else {
+      setContentIndex(contentIndex + 1)
+    }
+  }
+
+  const scrollPrevious = () => {
+    console.log(contentIndex)
+    if (contentIndex === 0){
+      setContentIndex(content.length - 1)
+    } else {
+      setContentIndex(contentIndex - 1)
+    }
+  }
+
+  console.log(contentIndex)
 
   return (
-    <section className="projects">
-      <div className="projects-wrapper columns is-centered">
-        {content.slice(0, 2).map(project => (
-          <ProjectCard
-            key={project.title}
-            content={project}
+    <section id="projects" className="projects">
+      <div className="columns">
+        <div className="column is-half">
+          <Mockup
+            image={content[contentIndex].image}
           />
-        ))}
-      </div>
-      <div className="projects-wrapper columns is-centered">
-        {content.slice(2, 4).map(project => (
-          <ProjectCard
-            key={project.title}
-            content={project}
-          />
-        ))}
-      </div>
-      <div>
+        </div>
+        <div className="column">
+          <h1>{content[contentIndex].title}</h1>
+          {content[contentIndex].blurb.split('\n').map(sentence => (
+            <p key={sentence}>{sentence}</p>
+          ))}
+          <h2>Tech</h2>
+          {content[contentIndex].tech.map(tech => (
+            <SvgIcon
+              key={tech}
+              width={38}
+              height={38}
+              icon={tech}
+              primaryFill={'#41b4d3'}
+              secondaryFill={'#ffffff'}
+              backgroundFill={'#242323'}
+            />
+          ))}
+          <div>
+            <a href={content[contentIndex].liveLink}
+              target="_blank"
+              rel="noreferrer">
+              <button>
+                <SvgIcon
+                  width={25}
+                  height={25}
+                  icon={browser.name}
+                  primaryFill={'#242323'}
+                />
+              Live
+              </button>
+            </a>
+
+            <a href={content[contentIndex].githubLink}
+              target="_blank"
+              rel="noreferrer">
+              <button>
+                <SvgIcon
+                  width={25}
+                  height={25}
+                  icon={'github'}
+                  primaryFill={'#242323'}
+                />
+              Github
+              </button>
+            </a>
+            <h2 onClick={scrollPrevious}>← Previous</h2>
+            <h2 onClick={scrollNext}>Next →</h2>
+          </div>
+        </div>
       </div>
     </section>
   )
 }
 
 export default Projects
+
