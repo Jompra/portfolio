@@ -12,12 +12,22 @@ const headlineOptions = [
 
 
 function HeroTitle() {
-  const [headline, setHeadline] = useState(headlineOptions[0])
+  const [headlineIndex, setHeadlineIndex] = useState(0)
   const [headlineWriting, setHeadlineWriting] = useState(false)
+  let headlineCharIndex = 0
 
+  const changeHeadline = () => {
+    const current = headlineOptions[headlineIndex].split('')
+    const next = headlineOptions[headlineIndex + 1].split('')
+    
 
+  }
+
+  React.useEffect(() => {
+    changeHeadline()
+  }, [])
   return (
-    <h1>{headline}</h1>
+    <h1>{headlineOptions[headlineIndex]}</h1>
   )
 }
 

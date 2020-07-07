@@ -8,7 +8,7 @@ export const SvgIcon = (props) => {
 
   let returnedIcon = null
 
-  switch (props.icon) {
+  switch (props.icon.toLowerCase()) {
     case 'javascript':
       returnedIcon = SvgJavascript(props)
       break
@@ -108,8 +108,14 @@ export const SvgIcon = (props) => {
     case 'email':
       returnedIcon = SvgEmail(props)
       break
-    case 'linkedIn':
+    case 'linkedin':
       returnedIcon = SvgLinkedIn(props)
+      break
+    case 'npm':
+      returnedIcon = SvgNpm(props)
+      break
+    case 'yarn':
+      returnedIcon = SvgYarn(props)
       break
 
   }
@@ -406,7 +412,21 @@ const SvgEmail = (props) => {
     </svg>
   )
 }
-
+const SvgNpm = (props) => {
+  return (
+    <svg width={props.width} height={props.height} viewBox="0 0 256 100" >
+      <path fill={props.primaryFill} d="M0 0v85.498h71.166V99.83H128V85.498h128V0H0z" />
+      <path fill={props.backgroundFill} d="M42.502 14.332h-28.17v56.834h28.17V28.664h14.332v42.502h14.332V14.332H42.502zM85.498 14.332v71.166h28.664V71.166h28.17V14.332H85.498zM128 56.834h-13.838v-28.17H128v28.17zM184.834 14.332h-28.17v56.834h28.17V28.664h14.332v42.502h14.332V28.664h14.332v42.502h14.332V14.332h-57.328z" />
+    </svg>
+  )
+}
+const SvgYarn = (props) => {
+  return (
+    <svg width={props.width} height={props.height} viewBox="0 0 288.6 310.4">
+      <path fill={props.primaryFill} d="M279.7 248.5c-16 3.8-24.1 7.3-43.9 20.2-31 20-64.8 29.3-64.8 29.3s-2.8 4.2-10.9 6.1c-14 3.4-66.7 6.3-71.5 6.4-12.9.1-20.8-3.3-23-8.6-6.7-16 9.6-23 9.6-23s-3.6-2.2-5.7-4.2c-1.9-1.9-3.9-5.7-4.5-4.3-2.5 6.1-3.8 21-10.5 27.7-9.2 9.3-26.6 6.2-36.9.8-11.3-6 .8-20.1.8-20.1s-6.1 3.6-11-3.8C3 268.2-1.1 256.6 0 242.3 1.4 225.8 19.6 210 19.6 210s-3.2-24.1 7.3-48.8c9.5-22.5 35.1-40.6 35.1-40.6S40.5 96.9 48.5 75.4c5.2-14 7.3-13.9 9-14.5 6-2.3 11.8-4.8 16.1-9.5 21.5-23.2 48.9-18.8 48.9-18.8S135.3-6.7 147.3 1c3.7 2.4 17 32 17 32s14.2-8.3 15.8-5.2c8.6 16.7 9.6 48.6 5.8 68-6.4 32-22.4 49.2-28.8 60-1.5 2.5 17.2 10.4 29 43.1 10.9 29.9 1.2 55 2.9 57.8.3.5.4.7.4.7s12.5 1 37.6-14.5c13.4-8.3 29.3-17.6 47.4-17.8 17.5-.3 18.4 20.3 5.3 23.4z" />
+    </svg>
+  )
+}
 
 
 

@@ -5,7 +5,7 @@ import { SvgIcon } from './Icons'
 import Nav from './Nav'
 
 const iconOptions = [
-  { svg: 'email', path: '#contact-section' },
+  { svg: 'email', path: '#contact' },
   { svg: 'linkedIn', path: 'https://www.linkedin.com/in/georgekjones/' },
   { svg: 'github', path: 'https://github.com/jompra' }
 ]
@@ -43,7 +43,6 @@ function Hero() {
             <div className="hero-title">
               <HeroTitle />
             </div>
-
           </div>
         </div>
       </div>

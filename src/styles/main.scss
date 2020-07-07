@@ -10,10 +10,12 @@ $type-light: #ffffff;
 $brand-blue: #41b4d3;
 
 
-@import 'about', 'projects', 'hero', 'mockup';
+@import 'about', 'projects', 'hero', 'mockup', 'contact', 'footer';
 
 html {
   scroll-behavior: smooth;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 h1{

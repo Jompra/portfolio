@@ -6,10 +6,6 @@ const technicalSkills = ['node', 'javascript', 'react', 'python', 'mongo', 'post
 
 const currentlyLearning = ['vue', 'asp', 'c#']
 
-const professionalSkills = [
-  'Unit testing', 'GitHub', 'Team working', 'Active Learning', 'Pair Programming'
-]
-
 function About() {
 
   return (

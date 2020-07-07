@@ -1,6 +1,8 @@
+
 .hero{
   background-image: url('../Assets/HeroBackground.jpeg');
   background-position: left;
+  background-repeat: no-repeat;
   nav{
     a{
       font-family: $nunito;
@@ -35,5 +37,11 @@
     text-align: right;
     color: #242323;
     text-transform: uppercase;
+  }
+}
+
+@media screen and (max-width: 975px) {
+  .hero-title{
+    color: #ffffff;
   }
 }

@@ -1,46 +1,28 @@
 .projects{
-
-  .projects-wrapper{
-    margin: 20px 0;
-    .project-card{
-      max-width: 600px;
-      max-height: 600px;
-      margin: 1vw;
-      padding: 64px;
-      color: #ffffff;
-      background-color: darkgray;
-      border: 1px solid black;
-      h1{
-        font-family: $oswald;
-        text-transform: uppercase;
-        font-size: 32px;
-        font-weight: 500;
-        line-height: 1.19;
-        letter-spacing: 2px;
-        color: #ffffff;
-      }
-      h2{
-        font-family: $nunito;
-        font-size: 28px;
-        font-weight: 900;
-        letter-spacing: 0.88px;
-        color: #ffffff;
-      }
-      p{
-        font-family: $nunito;
-        font-size: 16px;
-        color: #ffffff;
-      }
-      button{
-        width: 131px;
-        height: 34px;
-        border: 1px solid $type-light;
-        color: $type-light;
-        background-color: rgba(0, 0, 0, 0);
-        padding: 4px;
-        border-radius: 17px;
-        
-      }
+  margin-top: 50px;
+  padding-bottom: 5%;
+  min-height: 550px;
+  position: relative;
+  svg{
+    margin: 3px;
+  }
+  .scroll-buttons{
+    position: absolute;
+    bottom:0;
+  }
+    h3{
+    display: inline;
+    padding: 5px 30px;
+  }
+  h3:hover{
+    cursor: pointer;
+  }
+  .site-link{
+    display: inline;
+    margin-right: 10px;
+    p{
+      display: block;
+      margin-bottom: 10px;
     }
   }
 }

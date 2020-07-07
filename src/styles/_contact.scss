@@ -1,0 +1,34 @@
+.contact{
+  background-color: $type-dark;
+  margin-top: 50px;
+  form{
+    input, textarea{
+      padding: 10px;
+      background-color: #5F5F5F;
+      border-radius: 10px;
+      box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.69);
+      border: none;
+      font-family: $nunito;
+      font-size: 16px;
+      color: #ffffff;
+    }
+    input::placeholder, textarea::placeholder{
+      color: #ffffff;
+    }
+    .button{
+      font-family: $nunito;
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-align: center;
+      color: #ffffff;
+      background-color: $brand-blue;
+      border: none;
+      border-radius: 1.5rem;
+    }
+    .message{
+      min-width: 200px;
+    }
+  }
+}
