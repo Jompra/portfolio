@@ -1,0 +1,47 @@
+.interests{
+  background-color: $type-dark;
+  text-align: left;
+  padding-bottom: 20vh;
+  .intro-blurb{
+    width: 75%;
+    margin-top: 10vh;
+    padding-top: 10vh;
+    h1{
+      margin-left: 1vw;
+    }
+    p{
+      padding: 5vh 1vw;
+    }
+  }
+
+  .interests-content{
+    color: $type-light;
+    margin: 1vh 10vw;
+    
+  }
+  .project-area{
+    margin: 0 auto;
+  .image-card{
+    position: relative;
+    background-size: cover;;
+    padding: 0px;
+    height: 20em;
+  }
+
+  .image-card{
+    margin: 20px;
+  }
+
+  .card-text{
+    position: absolute;
+    text-align: left;
+    margin:40px;
+    top: 15%;
+    color: $type-light;
+    p{
+      margin-top: 16px;
+    }
+  }
+  }
+
+}

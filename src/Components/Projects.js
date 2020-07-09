@@ -64,15 +64,25 @@ function Projects() {
 
   return (
     <section id="projects" className="projects">
-      <div className="columns">
-        <div className="column is-half mockup-area">
+      <div className="background-color-box">
+
+      </div>
+      <div className="columns project-content">
+
+
+
+
+        <div className="column is-one-third mockup-area">
+          <div>
+            <h1>Projects</h1>
+          </div>
           <Mockup
             image={content[contentIndex].image}
           />
         </div>
         <div className="column description">
           <div className="blurb">
-            <h1>{content[contentIndex].title}</h1>
+            <h5>{content[contentIndex].title}</h5>
             {content[contentIndex].blurb.split('\n').map(sentence => (
               <p key={sentence}>{sentence}</p>
             ))}
@@ -82,8 +92,8 @@ function Projects() {
           {content[contentIndex].tech.map(tech => (
             <SvgIcon
               key={tech}
-              width={38}
-              height={38}
+              width={48}
+              height={48}
               icon={tech}
               primaryFill={'#41b4d3'}
               secondaryFill={'#242323'}
@@ -129,8 +139,8 @@ function Projects() {
 
           </div>
           <div className="scroll-buttons">
-            <h3 onClick={scrollPrevious}>← Previous</h3>
-            <h3 onClick={scrollNext}>Next →</h3>
+            <h4 onClick={scrollPrevious}>← Previous</h4>
+            <h4 onClick={scrollNext}>Next →</h4>
           </div>
         </div>
       </div>

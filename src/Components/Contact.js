@@ -27,7 +27,7 @@ function Contact() {
   return (
     <section id="contact" className="section contact">
       <div className="columns is-centered">
-        <div className="column is-3">
+        <div className="column is-2">
           <h1>Get In <span className="blue-text">Touch</span></h1>
         </div>
         <div className="column">
@@ -99,8 +99,8 @@ function Contact() {
                 </div>
               </div>
             </div>
-            <div className="field">
-              <button type="submit" className="button">Send Message</button>
+            <div className="field submit-button">
+              <button type="submit" className="button">Send Message –</button>
             </div>
             <h2>{emailSuccessMessage}</h2>
           </form>

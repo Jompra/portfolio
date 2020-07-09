@@ -1,6 +1,19 @@
 footer{
-  background-color: none;
-  h3{
-    display: inline;
+  background-color: $type-dark;
+  padding: 6em 1.8em;
+  .info-lines{
+    margin: 20px 5vw;
+    h3{
+      font-family: $nunito;
+      display: inline;
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      color: #ffffff;
+    }
+    svg{
+      margin: -10px 30px;
+    }
   }
+
 }

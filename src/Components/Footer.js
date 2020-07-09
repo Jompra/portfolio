@@ -4,8 +4,8 @@ import { SvgIcon } from './Icons'
 const content = [
   {
     icon: 'email',
-    text: 'georgekeesjones@gmail.com',
-    link: 'mailto: georgekeesjones@gmail.com'
+    text: 'Georgekeesjones@gmail.com',
+    link: 'mailto: georgekeesjones@gmail.com?subject=Hey%20I%20found%20your%20website...'
   },
   {
     icon: 'linkedIn',
@@ -19,19 +19,20 @@ const content = [
   }
 ]
 
+
 function Footer() {
   return (
-    <footer className="footer">
-      <div className=" content is-centered">
+    <footer>
+      <div className="footer-content">
         {content.map(link => (
-          <div key={link.text} className="">
+          <div key={link.text} className="info-lines">
             <a href={link.link}>
               <SvgIcon
                 width={40}
                 height={40}
                 icon={link.icon}
                 primaryFill={'#41b4d3'}
-                secondaryFill={'#ffffff'}
+                secondaryFill={'#242323'}
                 backgroundFill={'#242323'}
               />
               <h3>{link.text}</h3>

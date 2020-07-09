@@ -1,16 +1,46 @@
 
 .hero{
-  background-image: url('../Assets/HeroBackground.jpeg');
-  background-position: left;
-  background-repeat: no-repeat;
+  background: rgb(235,240,240);
+  background: linear-gradient(90deg, rgba(235,240,240,1) 0%, rgba(255,255,255,1) 53%, rgba(245,255,255,1) 100%);
+  position: relative;
+  .hero-body{
+    max-width: 1440px;
+  }
+  .column{
+  z-index: 1;
+}
+  .personal-image{
+    z-index: 0;
+    position: absolute;
+    left: 10vw;
+    bottom: -6px;
+  }
+
   nav{
+    margin-right: 10vw;
+    max-width: 1440px;
+    .nav-box{
+      display: flex;
+      justify-content: flex-end;
+    }
     a{
       font-family: $nunito;
       color: #242323;
-      font-size: 18px;
       margin: 25px;
+      padding: 5px;
+    }
+    a:last-child{
+    border: 1px solid $type-dark;
+    padding: 5px 15px;
+    border-radius: 1.5rem;
+    }
+    a:last-child:hover{
+    border: 1px solid $brand-blue;
+    background-color: $brand-blue;
+    color: #ffffff;
     }
   }
+
   .social-icons{
     display: flex;
     flex-direction: column;
@@ -28,10 +58,18 @@
     color: #242323;
     text-transform: uppercase;
   }
+  @media only screen and (max-width: 768px){
+  .personal-image{
+    display: none;
+  }
+  nav{
+    display: none;
+  }
+}
   .name{
     margin-right: 10vw;
     font-family: $oswald;
-    font-size: 18px;
+    font-size: 40px;
     font-weight: 500;
     letter-spacing: 6px;
     text-align: right;
@@ -40,8 +78,4 @@
   }
 }
 
-@media screen and (max-width: 975px) {
-  .hero-title{
-    color: #ffffff;
-  }
-}
+
