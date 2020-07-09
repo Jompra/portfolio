@@ -8,7 +8,7 @@ export const SvgIcon = (props) => {
 
   let returnedIcon = null
 
-  switch (props.icon.toLowerCase()) {
+  switch (props.icon.toLowerCase().split('.')[0]) {
     case 'javascript':
       returnedIcon = SvgJavascript(props)
       break
@@ -21,10 +21,10 @@ export const SvgIcon = (props) => {
     case 'react':
       returnedIcon = SvgReact(props)
       break
-    case 'mongo':
+    case 'mongodb':
       returnedIcon = SvgMongo(props)
       break
-    case 'postgres':
+    case 'postgresql':
       returnedIcon = SvgPostgres(props)
       break
     case 'git':

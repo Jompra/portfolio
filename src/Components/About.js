@@ -2,9 +2,9 @@ import React from 'react'
 import { SvgIcon } from './Icons'
 
 
-const technicalSkills = ['node', 'javascript', 'react', 'python', 'mongo', 'postgres', 'git', 'github', 'django', 'html', 'css', 'ruby', 'heroku', 'vscode', 'crestron']
+const technicalSkills = ['Node.js', 'JavaScript', 'React.js', 'Python', 'MongoDB', 'PostgreSQL', 'Git', 'GitHub', 'Django', 'HTML', 'CSS', 'Ruby', 'Heroku', 'VScode', 'Crestron']
 
-const currentlyLearning = ['vue', 'asp', 'c#']
+const currentlyLearning = ['Vue.js', 'ASP.net', 'c#']
 
 function About() {
 
@@ -14,10 +14,10 @@ function About() {
         <div className="column is-half about-blurb">
           <div>
             <h1>About <span className="blue-text">Me</span></h1>
-            <h2>I&apos;m a General Assembly Grad, Engineer, Entrepreneur, Tinkerer<span className="blue-text">.</span></h2>
+            <h2>I&apos;m an, Engineer, Entrepreneur, Tinkerer<span className="blue-text">.</span></h2><br></br>
             <p>I initially decided to teach myself Python and C# using online platforms, books, and short courses, before deciding to accelerate my knowledge and partake in a bootcamp with General Assembly. I&apos;m language agnostic, fast learning, goal driven and relish the opportunity to overcome complex problems.
             I&apos;m looking to join a team where I can grow and develop my skills, whilst contributing to the team&apos;s success on awesome projects.</p>
-          </div>
+          </div><br></br><br></br>
           <div>
             <h2>Currently Learning <span className="blue-text">–</span></h2>
             <div className="columns is-mobile">

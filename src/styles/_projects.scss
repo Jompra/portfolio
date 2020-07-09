@@ -1,10 +1,34 @@
 .projects{
   margin-top: 50px;
-  padding-bottom: 5%;
+  padding: 0 2% 5% 2%;
   min-height: 550px;
   position: relative;
+  background-color: $background-light;
+  .mockup-area{
+    min-height: 300px;
+    padding-bottom: 100px;
+  }
+  .blurb{
+    min-height: 300px;
+    p{
+      margin: 10px 0;
+    }
+  }
   svg{
-    margin: 3px;
+    margin: 10px 3px;
+  }
+  button{
+    background: none;
+    border: 1px solid $type-dark;
+    border-radius: 1.5rem;
+    padding: 5px 20px;
+    margin-top: 20px;
+    a{
+      color: $type-dark;
+      svg{
+        margin: 0 5px -3px 0;
+      }
+    }
   }
   .scroll-buttons{
     position: absolute;
