@@ -11,7 +11,7 @@ const content = [
     tech: ['javascript', 'trello', 'heroku', 'html', 'react', 'git', 'django', 'sass', 'python', 'npm'],
     liveLink: 'https://gkj.me.uk/filtr',
     githubLink: 'https://github.com/Jompra/sei-group-project',
-    image: require('../Assets/FiltrScreenshot.png')
+    image: require('../Assets/FiltrDemo.gif')
   },
   {
     title: 'Plntify',
@@ -19,7 +19,7 @@ const content = [
     tech: ['javascript', 'node', 'trello', 'mongo', 'git', 'heroku', 'html', 'react', 'css', 'bulma', 'npm'],
     liveLink: 'https://gkj.me.uk/plntify',
     githubLink: 'https://github.com/Jompra/sei-group-project',
-    image: require('../Assets/PlntifyScreenshot.png')
+    image: require('../Assets/PlntifyDemo.gif')
   },
   {
     title: 'Celebrity Lookalike',
@@ -27,7 +27,7 @@ const content = [
     tech: ['javascript', 'css', 'bulma', 'react', 'html', 'netlify', 'yarn'],
     liveLink: 'https://find-your-celebrity-lookalike.netlify.app/',
     githubLink: 'https://github.com/Jompra/sei-project-2',
-    image: require('../Assets/CelebrityScreenshot.png')
+    image: require('../Assets/CelebDemo.gif')
   },
   {
     title: 'Pupper',
@@ -35,7 +35,7 @@ const content = [
     tech: ['javascript', 'css', 'html', 'git', 'github'],
     liveLink: 'https://jompra.github.io/sei-project-one/',
     githubLink: 'https://github.com/Jompra/sei-project-one',
-    image: require('../Assets/PupperScreenshot.png')
+    image: require('../Assets/PupperDemo.gif')
   }
 ]
 
@@ -97,7 +97,7 @@ function Projects() {
               icon={tech}
               primaryFill={'#41b4d3'}
               secondaryFill={'#242323'}
-              backgroundFill={'#ffffff'}
+              backgroundFill={'#f1f1f1'}
             />
           ))}
           <div>
